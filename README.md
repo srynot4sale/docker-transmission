@@ -16,4 +16,4 @@ aaronb-transmission
 
 Included is a systemd unit file, which will destroy the docker on host shutdown and restart (and resume torrents) on startup.
 
-To access visit http://127.0.0.1:9091/web in your browser.
+To access visit http://127.0.0.1:9091/transmission/web in your browser.
