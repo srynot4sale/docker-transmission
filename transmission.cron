@@ -1,0 +1,12 @@
+# Control transmission docker
+
+# Drop all torrents to a crawl at 6am
+0 6 * * * aaronb transmission-remote -d 50
+0 6 * * * aaronb transmission-remote -u 20
+
+# Start all torrents at 12.30am
+30 0 * * * aaronb transmission-remote -t all -s
+
+# Remove any speed restrictions
+30 0 * * * aaronb transmission-remote -D
+30 0 * * * aaronb transmission-remote -U
