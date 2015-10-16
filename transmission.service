@@ -5,7 +5,7 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker run --name transmission -p 12345:12345 -p 12345:12345/udp -p 127.0.0.1:9091:9091 -v /archive/torrents/downloads:/var/lib/transmission-daemon/downloads -v /archive/torrents/incomplete:/var/lib/transmission-daemon/incomplete -v /archive/torrents/info:/etc/transmission-daemon aaronb-transmission
+ExecStart=/usr/bin/docker run --name transmission -p 12345:12345 -p 12345:12345/udp -p 9091:9091 -v /archive/torrents/downloads:/var/lib/transmission-daemon/downloads -v /archive/torrents/incomplete:/var/lib/transmission-daemon/incomplete -v /archive/torrents/info:/etc/transmission-daemon aaronb-transmission
 ExecStop=/usr/bin/docker stop -t 2 transmission ; /usr/bin/docker rm -f transmission
 
 [Install]
